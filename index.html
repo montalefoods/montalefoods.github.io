@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montale Foods</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#product-range">Our Products</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <!-- No text in the Hero section now -->
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about-us" class="about-us">
+        <h2>About Us</h2>
+        <p>At Montale Foods, we redefine the standards of food excellence. With a commitment to delivering only the finest quality, we create products that inspire moments of indulgence and sophistication. From sourcing premium ingredients to crafting distinctive flavors, Montale Foods exemplifies purity, perfection, and innovation.</p>
+        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
+    </div>
+
+    <!-- Products Section -->
+    <div id="product-range" class="product-range">
+        <h2>Our Products</h2>
+        <p>Explore our diverse range of premium food and beverage offerings, designed to delight your senses and elevate your culinary experience.</p>
+        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="customer-testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-container">
+            <p class="testimonial-text"></p>
+            <h4 class="testimonial-author"></h4>
+        </div>
+        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
+    </div>
+
+    <!-- Contact Us Section -->
+    <div id="contact-us" class="contact-us">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Montale Foods. All Rights Reserved.</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const testimonials = [
+            { text: "Montale Foods delivers unmatched quality and taste. Truly exceptional!", author: "John Doe" },
+            { text: "I've never experienced such dedication to premium products. Highly recommend!", author: "Jane Smith" },
+            { text: "Amazing flavors and top-notch quality. Montale Foods sets the bar high.", author: "Michael Brown" },
+            { text: "Exceptional products and fantastic service. Montale Foods is a game changer.", author: "Emily Johnson" }
+        ];
+
+        let currentTestimonial = 0;
+
+        function updateTestimonial() {
+            const testimonialText = document.querySelector('.testimonial-text');
+            const testimonialAuthor = document.querySelector('.testimonial-author');
+
+            testimonialText.style.opacity = 0;
+            testimonialAuthor.style.opacity = 0;
+
+            setTimeout(() => {
+                testimonialText.textContent = testimonials[currentTestimonial].text;
+                testimonialAuthor.textContent = testimonials[currentTestimonial].author;
+
+                testimonialText.style.opacity = 1;
+                testimonialAuthor.style.opacity = 1;
+
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            }, 500);
+        }
+
+        setInterval(updateTestimonial, 3000);
+        document.addEventListener('DOMContentLoaded', updateTestimonial);
+    </script>
+</body>
+</html>
