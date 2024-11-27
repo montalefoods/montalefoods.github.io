@@ -49,7 +49,8 @@ h2 {
 /* Hero Section */
 .hero {
     position: relative;
-    background: url('your-image-path.jpg') no-repeat center center;
+display: flex;
+background: url('your-image-path.jpg') no-repeat center center;
     background-size: contain; /* Ensures image fits within the hero section without cutting */
     background-position: center;
     background-attachment: fixed; /* Optional: gives a parallax effect */
@@ -61,6 +62,17 @@ h2 {
     color: #fff;
     padding: 0;
     overflow: hidden;
+}
+
+/* Add media query for smaller devices */
+@media (max-width: auto) {
+        display: flex;
+justify-content: center;  /* Horizontally center */
+        align-items: center;      /* Vertically center */
+        width: 100%;  /* Or the desired width */
+        height: auto;
+        background-attachment: scroll; /* Remove parallax effect on mobile */
+    }
 }
 
 /* About Section */
@@ -241,4 +253,28 @@ h2 {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;   /* Center items */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Add spacing between links */
+        width: 100%; /* Ensure full-width alignment */
+        text-align: center; /* Center-align links */
+    }
+
+    .navbar li {
+        display: block; /* Each link takes a full row */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Reduce font size slightly for mobile */
+        padding: 8px 0; /* Add spacing around links */
+    }
 }
