@@ -1,0 +1,244 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h2 {
+    color: #2a2a2a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #000;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('your-image-path.jpg') no-repeat center center;
+    background-size: contain; /* Ensures image fits within the hero section without cutting */
+    background-position: center;
+    background-attachment: fixed; /* Optional: gives a parallax effect */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* About Section */
+.about-us {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+
+.about-us p {
+    max-width: 800px;
+    margin: 0 auto 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.about-us .back-to-top {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin: 20px auto;
+}
+
+.about-us .back-to-top:hover {
+    background-color: #333;
+}
+
+/* Products Section */
+.product-range {
+    padding: 50px 20px;
+}
+
+.product-range p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.product-range .back-to-top {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin: 20px auto;
+}
+
+.product-range .back-to-top:hover {
+    background-color: #333;
+}
+
+/* Testimonials Section */
+.customer-testimonials {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.customer-testimonials .testimonial-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.customer-testimonials .testimonial-text {
+    font-size: 1.2rem;
+    color: #444;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.customer-testimonials .testimonial-author {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.customer-testimonials .back-to-top {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin: 20px auto;
+}
+
+.customer-testimonials .back-to-top:hover {
+    background-color: #333;
+}
+
+/* Contact Us Section */
+.contact-us {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.contact-us form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-us .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-us label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-us input, .contact-us textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-us button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-us button:hover {
+    background-color: #333;
+}
+
+.contact-us .back-to-top {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: block;
+    margin: 20px auto;
+}
+
+.contact-us .back-to-top:hover {
+    background-color: #333;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
