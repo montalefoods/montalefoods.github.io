@@ -66,6 +66,10 @@ background: url('your-image-path.jpg') no-repeat center center;
 
 /* Add media query for smaller devices */
 @media (max-width: auto) {
+    .hero {
+        background-attachment: inherit; /* Inherit the attachment from the main style */
+    }
+} {
         display: flex;
 justify-content: center;  /* Horizontally center */
         align-items: center;      /* Vertically center */
