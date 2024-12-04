@@ -88,7 +88,7 @@ justify-content: center;  /* Horizontally center */
 .about-us p {
     max-width: 800px;
     margin: 0 auto 15px;
-    text-align: center;
+    text-align: left;
     font-size: 1.1rem;
     color: #555;
 }
