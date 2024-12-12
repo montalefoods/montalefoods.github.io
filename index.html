@@ -40,13 +40,12 @@
 
     <!-- Testimonials Section -->
     <div id="testimonials" class="customer-testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial-container">
-            <p class="testimonial-text"></p>
-            <h4 class="testimonial-author"></h4>
-        </div>
-        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-container">
+        <p class="testimonial-text"></p>
     </div>
+    <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
+</div>
 
     <!-- Contact Us Section -->
     <div id="contact-us" class="contact-us">
@@ -107,33 +106,35 @@
     <!-- JavaScript -->
     <script>
         const testimonials = [
-            { text: "Montale Foods delivers unmatched quality and taste. Truly exceptional!", author: "John Doe" },
-            { text: "I've never experienced such dedication to premium products. Highly recommend!", author: "Jane Smith" },
-            { text: "Amazing flavors and top-notch quality. Montale Foods sets the bar high.", author: "Michael Brown" },
-            { text: "Exceptional products and fantastic service. Montale Foods is a game changer.", author: "Emily Johnson" }
+            { text: "The coffee from Montale Foods is simply unmatched. Every sip is a rich and satisfying experience.", author: "Ahmed Al Mansoori" },
+            { text: "Montale Foods never disappoints. Their commitment to top-notch quality sets them apart.", author: "Maria Fernandes" },
+            { text: "Montale Foods’ coffee has redefined my mornings. The aroma and taste are absolutely captivating.", author: "Yasmin Abdulla" },
+            { text: "Montale Foods brings unparalleled quality to the table. Their products are crafted with care and passion.", author: "Dhananjay S" },
+            { text: "The attention to detail in every product is incredible. Montale Foods is my trusted choice for premium goods.", author: "Sarah Johnson" },  
+            { text: "Their coffee is a work of art – robust, flavorful, and always fresh. I can’t imagine starting my day without it.", author: "Michael Brown" },  
+            { text: "From flavor to presentation, Montale Foods delivers excellence. Highly recommended!", author: "Khaled Al Habtoor" },  
+            { text: "I’ve tried countless brands, but Montale Foods consistently offers products that exceed my expectations.", author: "Leila Haddad" },  
+            { text: "Montale Foods' coffee is more than a beverage; it’s an experience. Each cup is crafted to perfection.", author: "Fatima Al Rashidi" },  
+            { text: "As a coffee lover, I appreciate the bold flavors and smooth finish of Montale Foods' coffee. It’s perfect for any time of day.", author: "Ahmed Al Faridi" },
         ];
 
         let currentTestimonial = 0;
 
         function updateTestimonial() {
-            const testimonialText = document.querySelector('.testimonial-text');
-            const testimonialAuthor = document.querySelector('.testimonial-author');
+    const testimonialText = document.querySelector('.testimonial-text');
+    const testimonialAuthor = document.querySelector('.testimonial-author');
 
-            testimonialText.style.opacity = 0;
-            testimonialAuthor.style.opacity = 0;
+    testimonialText.style.opacity = 0;
 
-            setTimeout(() => {
-                testimonialText.textContent = testimonials[currentTestimonial].text;
-                testimonialAuthor.textContent = testimonials[currentTestimonial].author;
+    setTimeout(() => {
+        testimonialText.innerHTML = `${testimonials[currentTestimonial].text} <strong> - ${testimonials[currentTestimonial].author}</strong>`;
 
-                testimonialText.style.opacity = 1;
-                testimonialAuthor.style.opacity = 1;
+        testimonialText.style.opacity = 1;
 
-                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            }, 500);
-        }
-
-        setInterval(updateTestimonial, 3000);
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+    }, 500);
+}
+        setInterval(updateTestimonial, 5000);
         document.addEventListener('DOMContentLoaded', updateTestimonial);
     </script>
 </body>
