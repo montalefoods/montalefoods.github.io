@@ -2,140 +2,182 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montale Foods | Purity Perfected. Flavors Refined. </title>
-    <!-- Link to the favicon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Montale Foods | Purity Perfected. Flavors Refined.</title>
+    
+    <link rel="preload" as="image" href="your-image-path.jpg">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <div class="navbar">
-        <ul>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#product-range">Our Products</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact-us">Contact Us</a></li>
-        </ul>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Montale Foods</div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="#about-us" onclick="closeMenu()">About Us</a></li>
+                    <li><a href="#product-range" onclick="closeMenu()">Our Products</a></li>
+                    <li><a href="#testimonials" onclick="closeMenu()">Testimonials</a></li>
+                    <li><a href="#contact-us" onclick="closeMenu()">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero"></header>
+
+    <div class="sticky-social-bar">
+        <a href="./404.html" class="social-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+        <a href="./404.html" class="social-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram"></a>
+        <a href="./404.html" class="social-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook"></a>
+        <a href="./404.html" class="social-btn"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn"></a>
     </div>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <!-- No text in the Hero section now -->
-    </div>
+    <main class="container">
+        <section id="about-us" class="section">
+            <h2>About Us</h2>
+            <div class="content-box">
+                <p>At Montale Foods, we offer more than just coffee—we provide an experience. Founded by passionate coffee lovers, our mission is to deliver the finest, sustainably sourced coffee that elevates your daily routine.</p>
+            </div>
+        </section>
 
-    <!-- About Us Section -->
-    <div id="about-us" class="about-us">
-        <h2>About Us</h2>
-        <p>At Montale Foods, we offer more than just coffee—we provide an experience. Founded by passionate coffee lovers, our mission is to deliver the finest, sustainably sourced coffee that elevates your daily routine. From carefully handpicking beans in renowned coffee-growing regions to roasting with precision, we ensure exceptional flavor in every cup. We prioritize sustainability by partnering with farms that follow organic practices, provide fair wages, and use eco-friendly methods, all while offering recyclable packaging. Choose Montale Foods for premium coffee that not only supports your taste but also nurtures a sustainable future.</p>
-        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
-    </div>
+        <section id="product-range" class="section">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://placehold.co/600x400?text=Signature+Roast" alt="Product">
+                    <h3>Signature Roast</h3>
+                    <p>Rich, aromatic beans sourced from the finest regions.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://placehold.co/600x400?text=Morning+Blend" alt="Product">
+                    <h3>Morning Blend</h3>
+                    <p>The perfect smooth start to your day.</p>
+                </div>
+                <div class="product-card">
+                    <img src="https://placehold.co/600x400?text=Exotic+Spices" alt="Product">
+                    <h3>Exotic Spices</h3>
+                    <p>Hand-selected organic spices to elevate your creations.</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Products Section -->
-    <div id="product-range" class="product-range">
-        <h2>Our Products</h2>
-        <p>Explore our diverse range of premium food and beverage offerings, designed to delight your senses and elevate your culinary experience.</p>
-        <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
-    </div>
+        <section id="testimonials" class="section">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-wrapper">
+                <p class="testimonial-text"></p>
+            </div>
+        </section>
 
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="customer-testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="testimonial-container">
-        <p class="testimonial-text"></p>
-    </div>
-    <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
-</div>
+        <section id="contact-us" class="section">
+            <h2>Contact Us</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.347597144133!2d55.2707828!3d25.2048493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDEyJzE3LjUiTiA1NcKwMTYnMTEuOCJF!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae3" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <form id="my-form" action="https://formspree.io/f/xyzynpnr" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" id="my-form-button">Submit</button>
+                <p id="my-form-status"></p>
+            </form>
+        </section>
+    </main>
 
-    <!-- Contact Us Section -->
-    <div id="contact-us" class="contact-us">
-        <h2>Contact Us</h2>
-    <form id="my-form" action="https://formspree.io/f/xyzynpnr" method="POST">
-<label>Name:</label>
-  <input type="name" name="name" />  
-<label>Email:</label>
-  <input type="email" name="email" />
-  <label>Message:</label>
-  <input type="text" name="message" />
-  <button id="my-form-button">Submit</button>
-  <p id="my-form-status"></p>
-</form>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Montale Foods. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-<!-- Place this script at the end of the body tag -->
-<script>
-  var form = document.getElementById("my-form");
-  
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
-        form.reset()
-      } else {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-          } else {
-            status.innerHTML = "Oops! There was a problem submitting your form"
-          }
-        })
-      }
-    }).catch(error => {
-      status.innerHTML = "Oops! There was a problem submitting your form"
-    });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
-    </form>
-    <button class="back-to-top" onclick="window.scrollTo(0, 0)">Back to Top</button>
-    </div>
+    <button id="backToTopBtn" onclick="scrollToTop()">
+        <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" fill="white"/></svg>
+    </button>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2026 Montale Foods. All Rights Reserved.</p>
-    </div>
-
-    <!-- JavaScript -->
     <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('open');
+        }
+
         const testimonials = [
-            { text: "The coffee from Montale Foods is simply unmatched. Every sip is a rich and satisfying experience.", author: "Ahmed Al Mansoori" },
-            { text: "Montale Foods never disappoints. Their commitment to top-notch quality sets them apart.", author: "Maria Fernandes" },
-            { text: "Montale Foods’ coffee has redefined my mornings. The aroma and taste are absolutely captivating.", author: "Yasmin Abdulla" },
-            { text: "Montale Foods brings unparalleled quality to the table. Their products are crafted with care and passion.", author: "Dhananjay S" },
-            { text: "The attention to detail in every product is incredible. Montale Foods is my trusted choice for premium goods.", author: "Sarah Johnson" },  
-            { text: "Their coffee is a work of art – robust, flavorful, and always fresh. I can’t imagine starting my day without it.", author: "Michael Brown" },  
-            { text: "From flavor to presentation, Montale Foods delivers excellence. Highly recommended!", author: "Khaled Al Habtoor" },  
-            { text: "I’ve tried countless brands, but Montale Foods consistently offers products that exceed my expectations.", author: "Leila Haddad" },  
-            { text: "Montale Foods' coffee is more than a beverage; it’s an experience. Each cup is crafted to perfection.", author: "Fatima Al Rashidi" },  
-            { text: "As a coffee lover, I appreciate the bold flavors and smooth finish of Montale Foods' coffee. It’s perfect for any time of day.", author: "Ahmed Al Faridi" },
+            { text: "The coffee from Montale Foods is simply unmatched.", author: "Ahmed Al Mansoori" },
+            { text: "Montale Foods never disappoints.", author: "Maria Fernandes" },
+            { text: "Captivating aroma and taste.", author: "Yasmin Abdulla" },
+            { text: "Unparalleled quality crafted with passion.", author: "Dhananjay S" },
+            { text: "My trusted choice for premium goods.", author: "Sarah Johnson" },
+            { text: "Robust, flavorful, and always fresh.", author: "Michael Brown" },
+            { text: "Delivers excellence from flavor to presentation.", author: "Khaled Al Habtoor" },
+            { text: "Consistently exceeds my expectations.", author: "Leila Haddad" },
+            { text: "Each cup is crafted to perfection.", author: "Fatima Al Rashidi" },
+            { text: "Bold flavors and smooth finish.", author: "Ahmed Al Faridi" }
         ];
 
         let currentTestimonial = 0;
-
         function updateTestimonial() {
-    const testimonialText = document.querySelector('.testimonial-text');
-    const testimonialAuthor = document.querySelector('.testimonial-author');
+            const txt = document.querySelector('.testimonial-text');
+            if(!txt) return;
+            txt.style.opacity = 0;
+            setTimeout(() => {
+                txt.innerHTML = `${testimonials[currentTestimonial].text} <strong> - ${testimonials[currentTestimonial].author}</strong>`;
+                txt.style.opacity = 1;
+                currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            }, 500);
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            updateTestimonial();
+            setInterval(updateTestimonial, 5000);
+        });
 
-    testimonialText.style.opacity = 0;
+        const form = document.getElementById("my-form");
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const status = document.getElementById("my-form-status");
+            const data = new FormData(event.target);
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    status.innerHTML = "Thanks for your submission!";
+                    form.reset();
+                } else {
+                    status.innerHTML = "Oops! Problem submitting form.";
+                }
+            } catch (error) {
+                status.innerHTML = "Oops! Problem submitting form.";
+            }
+        }
+        form.addEventListener("submit", handleSubmit);
 
-    setTimeout(() => {
-        testimonialText.innerHTML = `${testimonials[currentTestimonial].text} <strong> - ${testimonials[currentTestimonial].author}</strong>`;
-
-        testimonialText.style.opacity = 1;
-
-        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    }, 500);
-}
-        setInterval(updateTestimonial, 5000);
-        document.addEventListener('DOMContentLoaded', updateTestimonial);
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        window.onscroll = () => { document.getElementById("backToTopBtn").style.opacity = window.scrollY > 400 ? "1" : "0"; };
     </script>
 </body>
 </html>
